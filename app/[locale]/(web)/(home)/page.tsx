@@ -5,8 +5,10 @@ import HomeCamsComponent from "./_components/cams/component";
 
 export default function Page() {
   return (
-    <Suspense fallback={<HomeCamsLoading />}>
-      <HomeCamsComponent />
-    </Suspense>
+    <div className="flex vt-name-[container] w-full">
+      <Suspense fallback={<HomeCamsLoading />}>
+        <HomeCamsComponent />
+      </Suspense>
+    </div>
   );
 }

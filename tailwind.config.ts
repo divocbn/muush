@@ -14,6 +14,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-view-transitions")],
 };
 export default config;

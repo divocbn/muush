@@ -13,6 +13,7 @@ type PublicRootLayoutProps = {
     locale: string
   }
 
+  login: React.ReactNode
   sidebar: React.ReactNode
 }
 
@@ -29,7 +30,8 @@ export default async function PublicRootLayout(props: PropsWithChildren<PublicRo
 
   const {
     children,
-    sidebar
+    sidebar,
+    login
   } = props;
 
   const locale = await params.locale;
@@ -49,6 +51,10 @@ export default async function PublicRootLayout(props: PropsWithChildren<PublicRo
                 className="relative h-fit"
                 alt="Muush Cat Logo"
               />
+
+              <div className="max-w-3xl flex items-center w-full h-12 rounded-xl bg-white/10 px-6">
+                <p className="text-white/50 font-medium text-xs">Nach Modell suchen...</p>
+              </div>
             </div>
 
             <div className="flex flex-row gap-16 py-8">

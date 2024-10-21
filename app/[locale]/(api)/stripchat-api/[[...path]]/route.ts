@@ -5,6 +5,7 @@ export async function GET(req: NextRequest, props: { params: Promise<{ path: str
   const { searchParams } = new URL(req.url);
 
   const targetUrl = `https://stripchat.com/api/front/${params.path.join('/')}${searchParams ? '?' + searchParams.toString() : ''}`;
+  console.log("(targetUrl):", targetUrl)
 
   try {
     const response = await fetch(targetUrl, {
@@ -12,7 +13,7 @@ export async function GET(req: NextRequest, props: { params: Promise<{ path: str
     });
 
     const data = await response.json();
-    return NextResponse.json(data);
+    return NextResponse.json(data, { status: response.status });
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
   }
