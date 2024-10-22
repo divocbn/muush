@@ -1,3 +1,4 @@
+import Button from '@/components/ui/button';
 import { Link } from 'next-view-transitions'
 
 export default function PublicSidebarComponent() {
@@ -16,7 +17,7 @@ export default function PublicSidebarComponent() {
 
       <div className="flex flex-col gap-3 w-full">
         <h3 className="text-sm font-semibold">Kategorien</h3>
-        <div className="h-10 w-full bg-white/10 rounded" />
+        <Button className="h-10 w-full bg-white/10 rounded">test</Button>
         <div className="h-10 w-full bg-white/10 rounded" />
         <div className="h-10 w-full bg-white/10 rounded" />
       </div>
