@@ -1,8 +1,6 @@
 "use client"
 
 import { ReactNode } from "react"
-import Page from "../../(home)/page"
-import { Button } from "@/components/ui/button"
 
 type CamLayoutProps = {
   info: ReactNode
