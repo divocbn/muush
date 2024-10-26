@@ -35,9 +35,9 @@ export default async function AppLayout(props: PropsWithChildren<AppLayoutProps>
     <ViewTransitions>
       <html lang={locale}>
         <body
-          className={`${fonts.geistSans.variable} ${fonts.geistMono.variable} antialiased dark`}
+          className={`${fonts.interSans.className} antialiased dark`}
         >
-            {children}
+          {children}
         </body>
       </html>
     </ViewTransitions>

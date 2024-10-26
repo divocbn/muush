@@ -21,7 +21,21 @@ export default async function PublicRootLayout(props: PropsWithChildren<PublicRo
   } = props;
 
   return (
-    <div className="min-h-screen flex flex-col p-8 tracking-[-0.0125em]">
+    <div className="min-h-screen flex flex-col p-8 tracking-[-0.0125em] bg-black/80">
+      <div
+        className="absolute inset-0 -z-10 bg-[35%_top] bg-no-repeat sm:bg-[38%_top] md:bg-[40%_top] lg:bg-[44%_top] xl:bg-top forced-colors:hidden"
+        style={{
+          backgroundImage: "url('/media/bg-top.jpg')"
+        }}
+      />
+
+      <div
+        className="absolute inset-0 -z-10 bg-top opacity-10 forced-colors:hidden"
+        style={{
+          backgroundImage: "url('/media/bg-noise.png')"
+        }}
+      />
+
       <div className="flex justify-between h-14">
         <Image
           src="/logo.png"
@@ -31,13 +45,14 @@ export default async function PublicRootLayout(props: PropsWithChildren<PublicRo
           alt="Muush Cat Logo"
         />
 
-        <div className="max-w-3xl flex items-center w-full h-12 rounded-xl bg-white/10 px-6">
-          <p className="text-white/50 font-medium text-xs">Nach Modell suchen...</p>
+        <div className="max-w-3xl flex items-center w-full h-12 rounded-xl bg-white/10 cursor-pointer border-white/5 border hover:border-white/10 group transition-all px-6 backdrop-blur-sm">
+          <p className="group-hover:text-white/60 text-white/50 transition-colors font-medium text-xs">Nach Modell suchen...</p>
         </div>
       </div>
 
-      <div className="flex flex-row gap-16 py-8">
+      <div className="flex flex-row gap-16 py-8 z-40 min-h-[calc(100vh_-_120px)]">
         {sidebar}
+        {login}
         {children}
       </div>
     </div>
