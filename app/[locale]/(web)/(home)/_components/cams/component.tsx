@@ -3,6 +3,7 @@ import { sleep } from "@/lib/utils/sleep";
 
 import { Link } from 'next-view-transitions';
 import Image from "next/image";
+import { Model } from "./model";
 
 export default async function HomeCamsComponent() {
   return (
