@@ -52,7 +52,6 @@ export default async function PublicRootLayout(props: PropsWithChildren<PublicRo
 
       <div className="flex flex-row gap-16 py-8 z-40 min-h-[calc(100vh_-_120px)]">
         {sidebar}
-        {login}
         {children}
       </div>
     </div>
