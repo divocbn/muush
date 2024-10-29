@@ -12,7 +12,7 @@ export default function CamLayout({
   player, chat, info
 }: CamLayoutProps) {
   return (
-    <div className="flex flex-col gap-5  vt-name-[container] w-full">
+    <div className="flex flex-col gap-5 vt-name-[container] w-full z-50">
       <div className="flex flex-row gap-2 w-full h-full">
         {player}
         {chat}

@@ -12,7 +12,15 @@ const geistMono = localFont({
   weight: "100 500 900",
 });
 
+const interSans = localFont({
+  src: "./inter.woff2",
+  variable: "--font-inter",
+  weight: "100 500 900",
+});
+
 export const fonts = {
   geistSans,
-  geistMono
+  geistMono,
+
+  interSans
 }
