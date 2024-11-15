@@ -1,4 +1,3 @@
-
 export type ModelTargetCamResponse = {
   cam: {
     webRTCAppKey: string

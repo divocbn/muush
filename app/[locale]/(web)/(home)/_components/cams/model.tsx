@@ -12,7 +12,7 @@ const Model = forwardRef<HTMLDivElement, ModelProps>(
   ({ children, className, name, ...props }, ref) => {
     return (
       <Link
-        className={cn(className, "w-60 h-32 bg-blue-200/75 rounded-sm relative flex items-end py-2 px-3")}
+        className={cn(className, "w-60 h-32 bg-white/10 rounded-sm relative flex items-end py-2 px-3")}
         href={`/de/${name}`}
       >
         <p className="text-sm font-semibold underline-offset-2">{name}</p>

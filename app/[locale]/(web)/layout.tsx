@@ -45,8 +45,11 @@ export default async function PublicRootLayout(props: PropsWithChildren<PublicRo
           alt="Muush Cat Logo"
         />
 
-        <div className="max-w-3xl flex items-center w-full h-12 rounded-xl bg-white/10 cursor-pointer border-white/5 border hover:border-white/10 group transition-all px-6 backdrop-blur-sm">
-          <p className="group-hover:text-white/60 text-white/50 transition-colors font-medium text-xs">Nach Modell suchen...</p>
+        <div className="max-w-3xl flex items-center w-full h-12 rounded-xl bg-white/10 cursor-pointer border-white/5 border hover:border-white/10 group transition-all backdrop-blur-sm">
+          <input
+            className="w-full h-full cursor-pointer bg-transparent outline-none group-hover:text-white/60 text-white/50 transition-colors font-medium text-xs px-6"
+            placeholder="Nach Modell suchen..."
+          />
         </div>
       </div>
 
